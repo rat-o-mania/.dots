@@ -328,6 +328,10 @@
 (use-package corfu
   :custom
   (corfu-cycle t)
+  (corfu-auto t)
+  (corfu-auto-delay 0.0)
+  (corfu-quit-at-boundary 'separator)
+  (corfu-echo-documentation 0.25)
   :init
   (global-corfu-mode))
 #+end_src
@@ -338,8 +342,7 @@
   :hook ((python-mode . eglot-ensure)
          (c-mode . eglot-ensure)
          (sh-mode . eglot-ensure)
-         (emacs-lisp-mode . eglot-ensure
-         )))
+         (emacs-lisp-mode . eglot-ensure)))
 #+end_src
 
 * Useful settings
